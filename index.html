@@ -2,6 +2,9 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
     <title>Michel Broeders Portfolio</title>
 
     <script defer src="code.js"></script>
@@ -11,24 +14,28 @@
 </head>
 <body>
 
-<header>
-<div id="linker-balkje"></div>
-<div id="rechter-balkje"></div>
+<header id="top">
+    <div id="linker-balkje"></div>
+    <div id="rechter-balkje"></div>
 </header>
 
 <nav id="hoofdnavigatie-container">
+    <div id="linker-blok"></div>
     <div id="hoofdnavigatie">
         <a href="#wie-ben-ik">Over mij</a>
         <a href="#projecten">Projecten</a>
         <a href="#recreatie">Recreatie</a>
     </div>
-    <a class="portfolio-link" href="./portfolio.html"><u>Portfolio&#8594;</u></a>
+    <div id="rechter-blok">
+        <a class="portfolio-link" href="./portfolio.html"><u>Portfolio&#8594;</u></a>
+    </div>
+
 </nav>
 
 <main>
 
-    <section>
-        <h2 id="wie-ben-ik">Wie ben ik?</h2>
+    <section id="wie-ben-ik">
+        <h2>Wie ben ik?</h2>
         <article>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aperiam asperiores atque
                 beatae dignissimos dolore dolorem doloremque earum eligendi, eos exercitationem harum incidunt iure
@@ -49,8 +56,8 @@
         </article>
     </section>
 
-    <section>
-        <h2 id="projecten">Projecten</h2>
+    <section id="projecten">
+        <h2>Projecten</h2>
         <article>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores aut commodi cum cumque
                 delectus dicta, distinctio ducimus eveniet facilis ipsam ipsum itaque iure laboriosam, laborum natus
@@ -70,35 +77,68 @@
         </article>
     </section>
 
-    <section>
-        <h2 id="recreatie">Recreatie</h2>
-        <article>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum fuga, id iste quibusdam
-                repellendus saepe sit velit vero! Delectus enim expedita fuga hic libero maiores quam, recusandae. Atque
-                ex optio quas tempora ut. Aliquid culpa explicabo incidunt ipsa laboriosam libero necessitatibus odio
-                possimus totam, velit! Ad aliquam assumenda, eaque eligendi magni nobis odit omnis quis saepe?
-                Architecto at beatae culpa dolor doloremque doloribus eligendi eos expedita facilis, fugiat in ipsa
-                laborum minima molestiae natus, necessitatibus neque nesciunt obcaecati porro, possimus qui rem
-                reprehenderit suscipit tempora vel veniam veritatis. Assumenda atque autem dolorem ea, in iure modi nam,
-                nemo nesciunt, optio possimus ratione reiciendis tempore? A autem consequatur culpa debitis deserunt
-                dolorum earum enim error, illo impedit incidunt inventore iste minima molestiae necessitatibus nemo
-                officiis quas qui quisquam quos reiciendis rem repellendus repudiandae soluta sunt ut velit
-                voluptatibus. Aut possimus quidem repellendus voluptates! Consequuntur cumque esse saepe vero! Aliquid
-                aspernatur debitis delectus dignissimos est eum excepturi inventore ipsum nam officia possimus
-                provident, veniam. Ab aliquid animi commodi consectetur, consequuntur corporis cum cupiditate debitis
-                deleniti deserunt dicta dolore eaque earum eius illum ipsa ipsum laboriosam, nemo numquam officiis
-                placeat quaerat rem repellendus repudiandae similique suscipit tenetur totam unde vitae voluptate?
-                Ipsum!</p>
-        </article>
+    <section id="recreatie">
+        <h2>Recreatie</h2>
+        <div id="recreatie-content-container">
+            <article id="recreatie-content-links">
+                <img src="./assets/land-o-lakes-inc-o8gGuhfjB2M-unsplash.jpg" alt="video">
+                <h3>Titel</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores consequuntur, corporis
+                    doloribus ea eaque eveniet impedit iste itaque mollitia, nam neque nulla, totam unde voluptas.
+                    Accusamus adipisci alias asperiores commodi cumque deleniti enim et eum excepturi explicabo id
+                    inventore nihil odit officiis quisquam, sapiente suscipit ut veritatis vero voluptatum. Ad animi
+                    aperiam asperiores aut consequatur delectus dicta dignissimos expedita fugit impedit magnam maiores
+                    maxime minus modi mole!</p>
+            </article>
+            <div id="recreatie-content-rechts">
+                <article>
+                    <img src="./assets/land-o-lakes-inc-o8gGuhfjB2M-unsplash.jpg" alt="video">
+                    <h3>Titel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi blanditiis dignissimos libero
+                        magni
+                        nulla officiis perferendis, perspiciatis, praesentium quia quos rerum, tempora? Accusantium
+                        atque
+                        delectus illum nostrum obcaecati quod, reiciendis similique? Animi asperiores autem,
+                        exercitationem
+                        impedis.</p>
+                </article>
+                <article>
+                    <img src="./assets/land-o-lakes-inc-o8gGuhfjB2M-unsplash.jpg" alt="video">
+                    <h3>Titel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi blanditiis dignissimos libero
+                        magni
+                        nulla officiis perferendis, perspiciatis, praesentium quia quos rerum, tempora? Accusantium
+                        atque
+                        delectus illum nostrum obcaecati quod, reiciendis similique? Animi asperiores autem,
+                        exercitationem
+                        impedis.</p>
+                </article>
+                <article>
+                    <img src="./assets/land-o-lakes-inc-o8gGuhfjB2M-unsplash.jpg" alt="video">
+                    <h3>Titel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi blanditiis dignissimos libero
+                        magni
+                        nulla officiis perferendis, perspiciatis, praesentium quia quos rerum, tempora? Accusantium
+                        atque
+                        delectus illum nostrum obcaecati quod, reiciendis similique? Animi asperiores autem,
+                        exercitationem
+                        impedis.</p>
+                </article>
+
+            </div>
+        </div>
     </section>
 
 </main>
 <footer>
     <nav>
-        <a href=""><u>&#8593; Terug naar boven &#8593;</u></a>
-
-        <a href=""><u>Privacy policy</u></a>
-        <a class="portfolio-link" href="./portfolio.html"><u>Portfolio&#8594;</u></a>
+        <div>
+            <a class="terug-naar-boven" href="#top"><u>&#8593; Terug naar boven &#8593;</u></a>
+        </div>
+        <div id="footer-links">
+            <a href=""><u>Privacy policy</u></a>
+            <a class="portfolio-link" href="./portfolio.html"><u>Portfolio&#8594;</u></a>
+        </div>
     </nav>
 
 </footer>
