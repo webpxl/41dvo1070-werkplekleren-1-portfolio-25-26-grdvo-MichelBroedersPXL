@@ -3,7 +3,9 @@
     margin: 0;
     padding: 0;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -106,6 +108,48 @@ h2 {
     padding: 100px 120px 80px 0;
 }
 
+#projecten #projecten-container {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+
+    height: 450px;
+
+}
+#projecten-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+#projecten .project {
+    border: 3px solid black;
+    height: 100%;
+    width: 60%;
+    flex-shrink: 0;
+
+
+}
+#projecten .eerste-project {
+    margin-left: 150px;
+}
+#projecten .laatste-project {
+    margin-right: 150px;
+}
+
+
+#projecten .project img {
+    height: auto;
+    width: 100%;
+}
+
+
+
 #recreatie h2 {
     padding: 100px 0 80px 120px;
 }
@@ -153,6 +197,9 @@ h2 {
     overflow-y: scroll;
     overscroll-behavior-y: contain;
 
+}
+#recreatie-content-rechts::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 #recreatie-content-rechts img {
