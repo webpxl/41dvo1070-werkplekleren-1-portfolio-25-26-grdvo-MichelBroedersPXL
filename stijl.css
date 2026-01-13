@@ -118,13 +118,15 @@ h2 {
     flex-direction: row;
     align-items: center;
     gap: 80px;
-
+    padding: 60px 100px; /* More vertical space for shadow and scale */
+    height: 500px; /* Adjust height accordingly */
     overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-y: clip;
+
+
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
 
-    height: 450px;
 
 }
 #projecten-container::-webkit-scrollbar {
@@ -136,8 +138,9 @@ h2 {
     width: 60%;
     flex-shrink: 0;
 
+    transform-origin: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    background-image: url('./assets/land-o-lakes-inc-o8gGuhfjB2M-unsplash.jpg');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -160,6 +163,10 @@ h2 {
 
 }
 
+#projecten .project:hover {
+    transform: scale(1.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
 
 
 #recreatie h2 {
@@ -207,6 +214,9 @@ h2 {
 
     overflow-y: scroll;
     overscroll-behavior-y: contain;
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
 
 }
 #recreatie-content-rechts::-webkit-scrollbar {
