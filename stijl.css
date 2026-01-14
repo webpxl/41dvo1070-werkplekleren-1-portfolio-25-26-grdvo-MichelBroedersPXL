@@ -3,9 +3,15 @@
     margin: 0;
     padding: 0;
 }
+
+.hidden {
+    display: none !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -102,8 +108,13 @@ h2 {
 
 #wie-ben-ik article {
     margin: 0 240px 0 200px;
-
 }
+
+#wie-ben-ik p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
 
 #projecten h2 {
     display: flex;
@@ -129,6 +140,7 @@ h2 {
 
 
 }
+
 #projecten-container::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
 }
@@ -148,9 +160,11 @@ h2 {
 
 
 }
+
 #projecten .eerste-project {
     margin-left: 150px;
 }
+
 #projecten .laatste-project {
     margin-right: 150px;
 }
@@ -166,6 +180,163 @@ h2 {
 #projecten .project:hover {
     transform: scale(1.2);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#projecten .project-modal {
+    border: 2px solid black;
+
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+
+    border-radius: 40px;
+    position: fixed;
+
+    width: 60vw;
+    height: 90vh;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-kruisje {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35px;
+    height: 35px;
+
+    cursor: pointer;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+}
+.project-modal .project-foto {
+    border-radius: 40px;
+
+    width: 100%;
+    height: 65%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.project-modal .project-info {
+
+    border-radius: 0 0 40px 40px;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+
+}
+
+.project-modal .project-info p {
+}
+
+.project-modal .project-info-links {
+
+
+    border-radius: 0 0 0 40px;
+
+    width: 60%;
+    padding: 10px 15px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    gap: 10px;
+}
+
+.project-modal .project-info-links .project-info-links-tweede-p {
+    text-align: end;
+}
+
+.project-modal .project-info-links > div {
+    width: 50%;
+    position: relative;
+}
+
+
+
+
+.project-modal .project-info-links img {
+    transition: transform 0.3s ease, z-index 0s;
+    transform-origin: bottom left;
+
+    cursor: zoom-in;
+    display: block;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.project-modal .project-info-links img:hover {
+    transform: scale(3.5);
+    z-index: 1000;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.project-modal .project-info-links-eerste-foto{
+    margin-bottom: 10px;
+}
+.project-modal .project-info-links-tweede-foto{
+    margin-top: 10px;
+}
+
+
+.lijn {
+
+    border-left: 2px solid black;
+    margin: 10px 0;
+}
+.project-modal .project-info-rechts {
+    border-radius: 0 0 40px 0;
+
+    width: 40%;
+    padding: 10px 15px;
+
+}
+.project-modal .project-info-rechts p.project-beschrijving {
+    padding: 5px;
+}
+.project-modal .project-info-rechts .project-keywords-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.project-modal .project-info-rechts .project-keywords-container h4 {
+    padding: 5px;
+}
+
+
+.project-modal .project-info-rechts .project-keywords {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-modal .project-info-rechts .project-keywords p {
+    padding: 5px;
+    border-radius: 8px;
+    background-color: cyan;
 }
 
 
@@ -193,8 +364,15 @@ h2 {
     margin-right: 5%;
 }
 
-#recreatie-content-links img {
+#recreatie-content-links #recreatie-foto-links {
     width: 100%;
+    height: 75%;
+
+    background-image: url("./assets/klimfoto1.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
 
 }
 
@@ -219,9 +397,26 @@ h2 {
     -ms-overflow-style: none; /* IE and Edge */
 
 }
+
 #recreatie-content-rechts::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
 }
+
+#recreatie-content-rechts #recreatie-gitaar-scroller {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+
+    height: 280px;
+}
+
+#recreatie-gitaar-scroller video {
+    flex: 0 0 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 #recreatie-content-rechts img {
     width: 100%;
@@ -268,3 +463,4 @@ footer #footer-links {
     height: 300px;
 
 }
+

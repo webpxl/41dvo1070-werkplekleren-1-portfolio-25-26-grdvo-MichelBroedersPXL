@@ -37,22 +37,12 @@
     <section id="wie-ben-ik">
         <h2>Wie ben ik?</h2>
         <article>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aperiam asperiores atque
-                beatae dignissimos dolore dolorem doloremque earum eligendi, eos exercitationem harum incidunt iure
-                laborum molestiae molestias, nesciunt nisi nulla odit quibusdam recusandae reprehenderit repudiandae
-                sapiente, suscipit tenetur totam vero. A ab amet blanditiis consequuntur dicta eligendi error eveniet ex
-                exercitationem iure mollitia natus odit officia officiis omnis placeat quam quidem quisquam quo rem
-                repellendus saepe sequi similique, sunt ullam veniam vero voluptate. Accusamus aspernatur consequuntur
-                dicta eius error et, explicabo fugiat inventore iure libero minus modi non pariatur perspiciatis
-                quibusdam quisquam quo quos repellat! Accusantium, asperiores corporis debitis distinctio esse, et iure
-                laudantium molestias, obcaecati pariatur quia quidem ratione tenetur. Delectus laborum libero placeat
-                provident vero. Beatae consequuntur cumque cupiditate deleniti deserunt dolor dolore earum enim eum ex
-                exercitationem ipsum nesciunt non nulla obcaecati possimus quisquam, similique ut voluptas voluptatibus.
-                Accusantium ad animi aut consequuntur earum eius est expedita incidunt, inventore itaque labore nemo
-                nobis praesentium, quidem quo, reprehenderit rerum sunt unde. Alias animi aperiam assumenda cum debitis
-                deleniti deserunt dicta dignissimos dolore ex hic in ipsa laborum laudantium magni mollitia natus nobis
-                odio, praesentium quae qui, quibusdam quidem quo quod quos ratione reprehenderit saepe ut voluptas
-                voluptates.</p>
+            <p>Hey! Ik ben Michel.
+                Ik ben een digitaal vormgever in opleiding gesitueerd in Hasselt, Limburg. Ik studeer Digitale
+                Vormgeving aan de Hogeschool PXL en ga binnenkort het keuzetraject Design volgen. Ik ben zeer
+                gepassioneerd in alles rond creativiteit: muziek maken, tekenen en websites bouwen kan ik mij uren mee
+                bezighouden. Op deze webpagina vertel ik je wat meer over mijn projecten en interesses.
+            </p>
         </article>
     </section>
 
@@ -60,11 +50,40 @@
         <h2>Projecten</h2>
         <article id="projecten-container">
 
-           <template id="project-card-template">
-               <div class="project">
-               </div>
-           </template>
+            <template id="project-card-template">
+                <div class="project">
+                </div>
+            </template>
 
+            <template id="project-modal-template">
+                <div class="project-modal hidden">
+                    <div class="project-foto">
+                        <div class="modal-kruisje">&#10006;</div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-info-links">
+                            <div>
+                                <img class="project-info-links-eerste-foto" src="" alt="">
+                                <p class="project-info-links-eerste-p"></p>
+                            </div>
+                            <div>
+                                <p class="project-info-links-tweede-p"></p>
+                                <img class="project-info-links-tweede-foto" src="" alt="">
+                            </div>
+                        </div>
+                        <div class="lijn"></div>
+                        <div class="project-info-rechts">
+                            <h3 class="project-titel"></h3>
+                            <p class="project-beschrijving"></p>
+                            <div class="project-keywords-container">
+                                <h4>Keywords en tools</h4>
+                                <div class="project-keywords">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
         </article>
     </section>
 
@@ -72,8 +91,8 @@
         <h2>Recreatie</h2>
         <div id="recreatie-content-container">
             <article id="recreatie-content-links">
-                <img src="./assets/land-o-lakes-inc-o8gGuhfjB2M-unsplash.jpg" alt="video">
-                <h3>Titel</h3>
+                <div id="recreatie-foto-links"></div>
+                <h3>Boulderen</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores consequuntur, corporis
                     doloribus ea eaque eveniet impedit iste itaque mollitia, nam neque nulla, totam unde voluptas.
                     Accusamus adipisci alias asperiores commodi cumque deleniti enim et eum excepturi explicabo id
@@ -83,8 +102,21 @@
             </article>
             <div id="recreatie-content-rechts">
                 <article>
-                    <img src="./assets/land-o-lakes-inc-o8gGuhfjB2M-unsplash.jpg" alt="video">
-                    <h3>Titel</h3>
+
+
+                    <div id="recreatie-gitaar-scroller">
+                        <video controls>
+                            <source src="./assets/gitaarvideo1.mp4" type="video/mp4">
+                        </video>
+                        <video controls>
+                            <source src="./assets/gitaarvideo2.mp4" type="video/mp4">
+                        </video>
+                        <video controls>
+                            <source src="./assets/gitaarvideo3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <h3>Gitaar</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi blanditiis dignissimos libero
                         magni
                         nulla officiis perferendis, perspiciatis, praesentium quia quos rerum, tempora? Accusantium
@@ -95,7 +127,7 @@
                 </article>
                 <article>
                     <img src="./assets/land-o-lakes-inc-o8gGuhfjB2M-unsplash.jpg" alt="video">
-                    <h3>Titel</h3>
+                    <h3>Tekenen</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi blanditiis dignissimos libero
                         magni
                         nulla officiis perferendis, perspiciatis, praesentium quia quos rerum, tempora? Accusantium
@@ -104,17 +136,7 @@
                         exercitationem
                         impedis.</p>
                 </article>
-                <article>
-                    <img src="./assets/land-o-lakes-inc-o8gGuhfjB2M-unsplash.jpg" alt="video">
-                    <h3>Titel</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi blanditiis dignissimos libero
-                        magni
-                        nulla officiis perferendis, perspiciatis, praesentium quia quos rerum, tempora? Accusantium
-                        atque
-                        delectus illum nostrum obcaecati quod, reiciendis similique? Animi asperiores autem,
-                        exercitationem
-                        impedis.</p>
-                </article>
+
 
             </div>
         </div>

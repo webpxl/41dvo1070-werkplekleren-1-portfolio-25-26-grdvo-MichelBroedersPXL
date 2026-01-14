@@ -1,38 +1,67 @@
 const projecten = [
     {
-        hoofdAfbeelding: "./assets/land-o-lakes-inc-o8gGuhfjB2M-unsplash.jpg",
-        primaireInfo: {titel: "Project 1", beschrijving: "", keywords: ["", ""]},
-        secundaireInfo: [
-            {afbeelding: "", beschrijving: ""},
-            {afbeelding: "", beschrijving: ""}
-        ]
+        hoofdAfbeelding: "./assets/takeawaysite1.png",
+        primaireInfo: {
+            titel: "Takeaway site",
+            beschrijving: "Voor het vak scripting kreeg ik de opdracht een eenvoudige functionele takeaway website te maken. Het einddoel hield in dat we een visueel aantrekkelijk menu lieten inladen uit een aangeleverd menu. Ook moesten we werkende filters programmeren (zoals een prijsfilter, filteren op vegitarische items, ...) en een werkende winkelmand aanmaken.",
+            keywords: ["Webdesign", "HTML, CSS, JS"]
+        },
+        secundaireInfo: [{
+            afbeelding: "./assets/takeawaysite2.png",
+            beschrijving: "Hier zie je een voorbeeld van hoe een gevulde winkelmand er kan uit zien. De geselecteerde gerechten en drankjes worden bijgehouden in local storage zodat als de pagina herladen wordt de winkelmand wordt behouden."
+        }, {
+            afbeelding: "./assets/takeawaysite3.png",
+            beschrijving: "Dit is hoe de menu informatie werd aangeleverd. Je ziet dus een array in JavaScript met daarin alle menu-items en hun bijbehorende info."
+        }]
+    },
+    {
+        hoofdAfbeelding: "./assets/klimfoto1.jpg",
+        primaireInfo: {
+            titel: "Takeaway site",
+            beschrijving: "Voor het vak scripting kreeg ik de opdracht een eenvoudige functionele takeaway website te maken. Het einddoel hield in dat we een visueel aantrekkelijk menu lieten inladen uit een aangeleverd menu. Ook moesten we werkende filters programmeren (zoals een prijsfilter, filteren op vegitarische items, ...) en een werkende winkelmand aanmaken.",
+            keywords: ["Webdesign", "HTML, CSS, JS"]
+        },
+        secundaireInfo: [{
+            afbeelding: "./assets/klimfoto1.jpg",
+            beschrijving: "Hier zie je een voorbeeld van hoe een gevulde winkelmand er kan uit zien. De geselecteerde gerechten en drankjes worden bijgehouden in local storage zodat als de pagina herladen wordt de winkelmand wordt behouden."
+        }, {
+            afbeelding: "./assets/klimfoto1.jpg",
+            beschrijving: "Dit is hoe de menu informatie werd aangeleverd. Je ziet dus een array in JavaScript met daarin alle menu-items en hun bijbehorende info."
+        }]
+    },
+    {
+        hoofdAfbeelding: "./assets/klimfoto1.jpg",
+        primaireInfo: {
+            titel: "Takeaway site",
+            beschrijving: "Voor het vak scripting kreeg ik de opdracht een eenvoudige functionele takeaway website te maken. Het einddoel hield in dat we een visueel aantrekkelijk menu lieten inladen uit een aangeleverd menu. Ook moesten we werkende filters programmeren (zoals een prijsfilter, filteren op vegitarische items, ...) en een werkende winkelmand aanmaken.",
+            keywords: ["Webdesign", "HTML, CSS, JS"]
+        },
+        secundaireInfo: [{
+            afbeelding: "./assets/klimfoto1.jpg",
+            beschrijving: "Hier zie je een voorbeeld van hoe een gevulde winkelmand er kan uit zien. De geselecteerde gerechten en drankjes worden bijgehouden in local storage zodat als de pagina herladen wordt de winkelmand wordt behouden."
+        }, {
+            afbeelding: "./assets/klimfoto1.jpg",
+            beschrijving: "Dit is hoe de menu informatie werd aangeleverd. Je ziet dus een array in JavaScript met daarin alle menu-items en hun bijbehorende info."
+        }]
     },
 
-    {
-        hoofdAfbeelding: "./assets/land-o-lakes-inc-yPBP2u24rMs-unsplash.jpg",
-        primaireInfo: {titel: "Project 2", beschrijving: "", keywords: ["", ""]},
-        secundaireInfo: [
-            {afbeelding: "", beschrijving: ""},
-            {afbeelding: "", beschrijving: ""}
-        ]
-    },
-
-    {
-        hoofdAfbeelding: "./assets/peter-herrmann-1__n2B24HB8-unsplash.jpg",
-        primaireInfo: {titel: "Project 3", beschrijving: "", keywords: ["", ""]},
-        secundaireInfo: [
-            {afbeelding: "", beschrijving: ""},
-            {afbeelding: "", beschrijving: ""}
-        ]
-    }
 
 ]
+// Horizontale scroll voor de projectencontainer
 const projectenContainer = document.querySelector('#projecten-container');
 
 projectenContainer.addEventListener('wheel', (e) => {
     e.preventDefault();
     projectenContainer.scrollLeft += e.deltaY;
-});
+}, {passive: false}); // Add this option
+
+// Verticale scroll voorkomen wanneer je over de de gitaarvideo's scrolt
+const scrollContainer = document.getElementById('recreatie-gitaar-scroller');
+
+scrollContainer.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    scrollContainer.scrollLeft += event.deltaY;
+}, {passive: false});
 
 
 const projectCardTemplate = document.querySelector("#project-card-template");
@@ -50,5 +79,70 @@ for (let i = 0; i < projecten.length; i++) {
     projectElement.style.backgroundImage = `url(${projecten[i].hoofdAfbeelding})`;
     projectenContainer.appendChild(clone);
 }
+
+
+const projectModalTemplate = document.querySelector("#project-modal-template");
+
+
+function projectModalMaken(project) {
+    const clone = projectModalTemplate.content.cloneNode(true);
+
+    // hoofdafbeelding
+    clone.querySelector(".project-foto").style.backgroundImage = `url(${project.hoofdAfbeelding})`;
+
+
+    //primaire info
+    clone.querySelector(".project-titel").textContent = project.primaireInfo.titel;
+    clone.querySelector(".project-beschrijving").textContent = project.primaireInfo.beschrijving;
+    const projectKeywords = clone.querySelector(".project-keywords");
+    project.primaireInfo.keywords.forEach((keyword) => {
+        const p = document.createElement("p");
+        p.textContent = keyword;
+        projectKeywords.appendChild(p);
+
+    })
+
+
+    //secundaire info
+    const eersteFoto = clone.querySelector(".project-info-links-eerste-foto");
+    eersteFoto.src = project.secundaireInfo[0].afbeelding;
+    eersteFoto.alt = "Project afbeelding 1";
+    const tweedeFoto = clone.querySelector(".project-info-links-tweede-foto");
+    tweedeFoto.src = project.secundaireInfo[1].afbeelding;
+    tweedeFoto.alt = "Project afbeelding 2";
+
+    clone.querySelector(".project-info-links-eerste-p").textContent = project.secundaireInfo[0].beschrijving;
+    clone.querySelector(".project-info-links-tweede-p").textContent = project.secundaireInfo[1].beschrijving;
+
+
+    projectenContainer.appendChild(clone);
+
+}
+
+for (let i = 0; i < projecten.length; i++) {
+    projectModalMaken(projecten[i]);
+}
+
+// Get all project cards and modals
+const projectCards = document.querySelectorAll('.project');
+const projectModals = document.querySelectorAll('.project-modal');
+
+// Add click listeners to each project card
+projectCards.forEach((card, index) => {
+    card.addEventListener('click', () => {
+        // Show the corresponding modal
+        projectModals[index].classList.remove('hidden');
+    });
+});
+
+// Add click listeners to close buttons
+const closeButtons = document.querySelectorAll('.modal-kruisje');
+closeButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        projectModals[index].classList.add('hidden');
+    });
+});
+
+
 
 
