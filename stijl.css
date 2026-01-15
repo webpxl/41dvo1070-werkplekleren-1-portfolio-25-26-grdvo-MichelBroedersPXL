@@ -729,7 +729,13 @@ footer #footer-links {
 
     #recreatie-content-rechts,
     #recreatie-content-links {
-        width: 100%;
+        width: 80%;
+    }
+    .recreatie-decoratie {
+        top: 5%;
+    }
+    #recreatie-content-links {
+        margin-right: 0;
     }
 
 
