@@ -547,7 +547,6 @@ h2 {
     height: clamp(25rem, 90vh, 43.75rem);
 
 
-
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -693,6 +692,7 @@ footer #footer-links {
         width: 95vw;
         height: 95vh;
     }
+
     .project-modal .project-info-links img {
         transform-origin: bottom center;
     }
@@ -702,10 +702,11 @@ footer #footer-links {
 
     }
 
-    #projecten .project .titel-div{
+    #projecten .project .titel-div {
         padding: 0;
     }
-    #projecten .project .titel-div h3{
+
+    #projecten .project .titel-div h3 {
         padding: 1rem 2rem;
     }
 
@@ -725,6 +726,7 @@ footer #footer-links {
     #recreatie #recreatie-content-container #recreatie-foto-links {
         height: 25rem;
     }
+
     #recreatie-content-rechts,
     #recreatie-content-links {
         width: 100%;
