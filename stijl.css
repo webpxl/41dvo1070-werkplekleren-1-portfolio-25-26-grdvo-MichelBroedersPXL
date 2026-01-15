@@ -1,7 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    font-family: cormorant, 'Syne Mono', inter, serif;
+}
+
+/* kleurpalet
+
+gebroken wit: #F5FBE6
+teal: #215E61
+donker teal: #233D4D
+oranje: #FE7F2D
+grijs: #eeeeee
+
+ */
+
+:root {
+    color: #233D4D;
 }
 
 .hidden {
@@ -12,13 +33,32 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #F5FBE6;
+
+    overflow-x: hidden;
+}
+
+
 a {
     text-decoration: none;
     color: inherit;
 }
+
+a:hover {
+    color: #FE7F2D;
+    cursor: pointer;
+}
+
+#top div {
+    background-color: #F5FBE6;
+
+}
+
+
 #knik-link {
     text-decoration: underline;
-    color: darkorange;
+    color: #FE7F2D;
 
 }
 
@@ -33,15 +73,112 @@ header {
     width: 100%;
     height: 100vh;
 
-    background-image: url('./assets/klimfoto1.jpg');
+    background-image: linear-gradient(90deg, transparent, rgba(33, 94, 97, 0.7)),
+    url('./assets/klimfoto1.jpg');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+
+    overflow: hidden;
+
 }
 
+h1 {
+    font-family: 'Cormorant', inter, serif;
+    font-size: 185px;
+    padding-right: 25px;
+    padding-top: 20px;
+    text-align: end;
+
+    color: #F5FBE6;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    font-family: 'Cormorant', inter, serif;
+}
+
+h3, h4 {
+    font-family: 'Space Mono', 'Syne Mono', inter, serif;
+
+}
+
+section {
+    position: relative;
+}
+
+#hoofdnavigatie-container .portfolio-link u {
+    font-family: 'Space Mono', 'Syne Mono', inter, serif;
+}
+
+div.pagina-decoratie {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+div.pagina-lijn {
+    border-left: 4px solid #233D4D;
+    border-radius: 50%;
+    height: 300px;
+}
+
+div.pagina-lijn-twee {
+    border-left: 4px solid #233D4D;
+    border-radius: 50%;
+    height: 200px;
+}
+
+.header-decoratie {
+    left: 0;
+    top: 60%;
+    transform: rotate(45deg);
+}
+
+.header-decoratie .pagina-lijn {
+    border-left: 4px solid #F5FBE6;
+}
+
+.header-decoratie .pagina-lijn-twee {
+    border-left: 4px solid #F5FBE6;
+}
+
+.wiebenik-decoratie {
+    right: 0;
+    top: 40%;
+    transform: rotate(-45deg);
+}
+
+.projecten-decoratie {
+    left: 0;
+    top: 20%;
+    transform: rotate(45deg);
+}
+
+.recreatie-decoratie {
+    right: 0;
+    top: 15%;
+    transform: rotate(-45deg);
+}
+
+.footer-decoratie {
+    left: 0;
+    bottom: -60px;
+    transform: rotate(45deg);
+}
+
+footer .pagina-lijn {
+    border-left: 4px solid #F5FBE6;
+
+}
+
+footer .pagina-lijn-twee {
+    border-left: 4px solid #F5FBE6;
+}
 
 #linker-balkje {
-    background-color: white;
     border-radius: 0 40px 0 0;
 
     position: absolute;
@@ -52,7 +189,6 @@ header {
 }
 
 #rechter-balkje {
-    background-color: white;
     border-radius: 40px 0 0 0;
     position: absolute;
     bottom: 0;
@@ -69,6 +205,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
 }
 
 #hoofdnavigatie-container #linker-blok {
@@ -86,8 +223,10 @@ header {
 }
 
 #hoofdnavigatie {
-    background-color: darkcyan;
+
     border-radius: 0 0 40px 40px;
+    background-color: #215E61;
+    color: #F5FBE6;
 
     width: 37%;
     height: 120px;
@@ -101,11 +240,24 @@ header {
 }
 
 #hoofdnavigatie a {
+    font-family: 'Syne Mono', Inter, serif;
+
     width: 33.3333%;
+
+    text-shadow: #233D4D 2px 2px 2px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#hoofdnavigatie .navigatie-split-lijn {
+    border-right: 3px #F5FBE6 solid;
+    height: 35%;
+    border-radius: 2px;
+    box-shadow: #233D4D 2px 2px 2px;
+
+
 }
 
 h2 {
@@ -121,6 +273,7 @@ h2 {
 }
 
 #wie-ben-ik p {
+    font-family: Space Mono, Cormorant, inter, serif;
     font-size: 20px;
     line-height: 1.6;
 }
@@ -175,24 +328,26 @@ h2 {
 
 }
 
-#projecten .project .titel-div{
+#projecten .project .titel-div {
     position: absolute;
     bottom: 0;
     right: 0;
 
+    background-color: #215E61;
+    color: #F5FBE6;
+
     padding: 30px 70px 30px 42px;
 
 
-    background-color: white;
     border-radius: 50px 0 0 0;
 
 
 }
 
-#projecten .project h3{
+#projecten .project h3 {
+    font-family: space mono, inter, serif;
     font-size: 20px;
 }
-
 
 
 #projecten .eerste-project {
@@ -217,7 +372,8 @@ h2 {
 }
 
 #projecten .project-modal {
-    border: 2px solid black;
+    z-index: 1001;
+    border: 2px solid #233D4D;
 
     background-color: #eeeeee;
     display: flex;
@@ -250,10 +406,11 @@ h2 {
 
     cursor: pointer;
 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #233D4Daa;
     color: white;
     border-radius: 50%;
 }
+
 .project-modal .project-foto {
     border-radius: 40px;
 
@@ -305,8 +462,6 @@ h2 {
 }
 
 
-
-
 .project-modal .project-info-links img {
     transition: transform 0.3s ease, z-index 0s;
     transform-origin: bottom left;
@@ -323,22 +478,24 @@ h2 {
     transform: scale(3.5);
     z-index: 1000;
     position: relative;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 50px #233D4D80;
 }
 
-.project-modal .project-info-links-eerste-foto{
+.project-modal .project-info-links-eerste-foto {
     margin-bottom: 10px;
 }
-.project-modal .project-info-links-tweede-foto{
+
+.project-modal .project-info-links-tweede-foto {
     margin-top: 10px;
 }
 
 
 .lijn {
 
-    border-left: 2px solid rgba(0, 0, 0, 0.3);
+    border-left: 2px solid #233D4D50;
     margin: 25px 0;
 }
+
 .project-modal .project-info-rechts {
     position: relative;
     border-radius: 0 0 40px 0;
@@ -347,9 +504,11 @@ h2 {
     padding: 10px 15px;
 
 }
+
 .project-modal .project-info-rechts p.project-beschrijving {
     padding: 5px;
 }
+
 .project-modal .project-info-rechts .project-keywords-container {
 
 
@@ -357,6 +516,7 @@ h2 {
     right: 25px;
     bottom: 22px;
 }
+
 .project-modal .project-info-rechts .project-keywords-container h4 {
     padding: 5px;
 }
@@ -373,7 +533,8 @@ h2 {
 .project-modal .project-info-rechts .project-keywords p {
     padding: 5px;
     border-radius: 8px;
-    background-color: cyan;
+    background-color: #215E61;
+    color: #F5FBE6;
 }
 
 
@@ -405,7 +566,7 @@ h2 {
     width: 100%;
     height: 75%;
 
-    background-image: url("./assets/klimfoto1.jpg");
+    background-image: url("./assets/klimfoto3.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -414,12 +575,14 @@ h2 {
 }
 
 #recreatie-content-links h3 {
+
     font-size: 40px;
     margin: 10px 15px;
 }
 
 #recreatie-content-links p {
     margin: 8px;
+    text-align: end;
 }
 
 
@@ -474,28 +637,40 @@ h2 {
 footer {
     width: 100%;
 
+    position: relative;
+
     margin-top: 100px;
+
+    overflow: hidden;
 }
 
-footer div {
+footer a u {
+    font-family: 'Syne Mono', Inter, serif;
+}
+
+footer .terug-naar-boven {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-wrap: nowrap;
+
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+footer #footer-links {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
+    width: 100%;
+
     gap: 150px;
 
-}
-
-footer .terug-naar-boven {
-
-    text-wrap: nowrap;
-
-    margin-bottom: 20px;
-}
-
-footer #footer-links {
-    background-color: #a6a6a6;
+    background-color: #215E61;
+    color: #F5FBE6;
 
     height: 300px;
 

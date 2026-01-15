@@ -1,0 +1,1 @@
+De secundaire foto's in de project modals zijn vergrootbaar door erover te hoveren
