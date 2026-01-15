@@ -27,7 +27,7 @@ const projecten = [
             beschrijving: "Hier zie je een voorbeeld van hoe een gevulde winkelmand er kan uit zien. De geselecteerde gerechten en drankjes worden bijgehouden in local storage zodat als de pagina herladen wordt de winkelmand wordt behouden."
         }, {
             afbeelding: "./assets/takeawaysite3.png",
-            beschrijving: "Dit is hoe de menu informatie werd aangeleverd. Je ziet dus een array in JavaScript met daarin alle menu-items en hun bijbehorende info."
+            beschrijving: "Dit is hoe de menu informatie werd aangeleverd. Je ziet hier dus een array in JavaScript met daarin alle menu-items en hun bijbehorende info."
         }]
     },
     {

@@ -109,7 +109,7 @@ header {
 }
 
 h2 {
-    font-size: 180px;
+    font-size: 160px;
 }
 
 #wie-ben-ik h2 {
@@ -467,7 +467,7 @@ h2 {
 }
 
 #recreatie-content-rechts p {
-    margin: 8px;
+    margin: 8px 8px 16px 8px;
 }
 
 
