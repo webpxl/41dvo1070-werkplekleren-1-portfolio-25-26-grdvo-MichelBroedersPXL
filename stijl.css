@@ -85,9 +85,9 @@ header {
 
 h1 {
     font-family: 'Cormorant', inter, serif;
-    font-size: 185px;
-    padding-right: 25px;
-    padding-top: 20px;
+    font-size: 11.55rem;
+    padding-right: 1.55rem;
+    padding-top: 1.25rem;
     text-align: end;
 
     color: #F5FBE6;
@@ -116,19 +116,19 @@ div.pagina-decoratie {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 div.pagina-lijn {
     border-left: 4px solid #233D4D;
     border-radius: 50%;
-    height: 300px;
+    height: 18.75rem;
 }
 
 div.pagina-lijn-twee {
     border-left: 4px solid #233D4D;
     border-radius: 50%;
-    height: 200px;
+    height: 12.5rem;
 }
 
 .header-decoratie {
@@ -165,7 +165,7 @@ div.pagina-lijn-twee {
 
 .footer-decoratie {
     left: 0;
-    bottom: -60px;
+    bottom: -3.75rem;
     transform: rotate(45deg);
 }
 
@@ -179,23 +179,23 @@ footer .pagina-lijn-twee {
 }
 
 #linker-balkje {
-    border-radius: 0 40px 0 0;
+    border-radius: 0 2.5rem 0 0;
 
     position: absolute;
     bottom: 0;
     left: 0;
     width: 44%;
-    height: 43px;
+    height: 2.7rem;
 }
 
 #rechter-balkje {
-    border-radius: 40px 0 0 0;
+    border-radius: 2.5rem 0 0 0;
     position: absolute;
     bottom: 0;
     right: 0;
 
     width: 19%;
-    height: 43px;
+    height: 2.5rem;
 
 }
 
@@ -205,17 +205,17 @@ footer .pagina-lijn-twee {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
+    height: 15vh; /* Add explicit height to parent */
 }
 
 #hoofdnavigatie-container #linker-blok {
     width: 44%;
-    height: 120px;
+    height: 100%; /* Use full height of parent */
 }
 
 #hoofdnavigatie-container #rechter-blok {
     width: 19%;
-    height: 120px;
+    height: 100%; /* Use full height of parent */
 
     display: flex;
     justify-content: center;
@@ -223,14 +223,12 @@ footer .pagina-lijn-twee {
 }
 
 #hoofdnavigatie {
-
-    border-radius: 0 0 40px 40px;
+    border-radius: 0 0 2.5rem 2.5rem;
     background-color: #215E61;
     color: #F5FBE6;
 
     width: 37%;
-    height: 120px;
-
+    height: 100%; /* Use full height of parent */
 
     display: flex;
     flex-direction: row;
@@ -238,6 +236,7 @@ footer .pagina-lijn-twee {
     align-items: center;
     flex-wrap: nowrap;
 }
+
 
 #hoofdnavigatie a {
     font-family: 'Syne Mono', Inter, serif;
@@ -261,20 +260,22 @@ footer .pagina-lijn-twee {
 }
 
 h2 {
-    font-size: 160px;
+    font-size: 10rem;
 }
 
 #wie-ben-ik h2 {
-    padding: 100px 0 80px 120px;
+    padding: clamp(2rem, 10vh, 6.25rem) 0 clamp(1.5rem, 5vh, 5rem) clamp(1rem, 8vw, 7.5rem);
 }
 
+
 #wie-ben-ik article {
-    margin: 0 240px 0 200px;
+    margin: 0 clamp(1rem, 15vw, 15rem) 0 clamp(1rem, 13vw, 12.5rem);
 }
+
 
 #wie-ben-ik p {
     font-family: Space Mono, Cormorant, inter, serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.6;
 }
 
@@ -284,16 +285,17 @@ h2 {
     flex-direction: row;
     justify-content: right;
     align-items: center;
-    padding: 100px 120px 80px 0;
+    padding: clamp(2rem, 8vh, 6.25rem) clamp(1rem, 8vw, 7.5rem) clamp(1.5rem, 6vh, 5rem) 0;
 }
+
 
 #projecten #projecten-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 80px;
-    padding: 60px 100px; /* More vertical space for shadow and scale */
-    height: 500px; /* Adjust height accordingly */
+    gap: 5rem;
+    padding: 3.75rem 6.25rem;
+    height: 31.25rem;
     overflow-x: scroll;
     overflow-y: clip;
 
@@ -321,7 +323,7 @@ h2 {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    border-radius: 120px;
+    border-radius: 7.5rem;
 
     overflow: hidden;
 
@@ -336,34 +338,30 @@ h2 {
     background-color: #215E61;
     color: #F5FBE6;
 
-    padding: 30px 70px 30px 42px;
-
-
-    border-radius: 50px 0 0 0;
-
+    padding: clamp(1rem, 3vw, 1.875rem) clamp(2rem, 7vw, 4.375rem) clamp(1rem, 3vw, 1.875rem) clamp(1.5rem, 4vw, 2.625rem);
+    border-radius: clamp(1.5rem, 5vw, 3.125rem) 0 0 0;
 
 }
 
+
 #projecten .project h3 {
     font-family: space mono, inter, serif;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 
 #projecten .eerste-project {
-    margin-left: 150px;
+    margin-left: clamp(1rem, 10vw, 9.375rem);
 }
 
 #projecten .laatste-project {
-    margin-right: 150px;
+    margin-right: clamp(1rem, 10vw, 9.375rem);
 }
-
 
 #projecten .project img {
     height: 100%;
     width: 100%;
-    border-radius: 120px;
-
+    border-radius: clamp(2rem, 8vw, 7.5rem);
 }
 
 #projecten .project:hover {
@@ -381,7 +379,7 @@ h2 {
     flex-wrap: nowrap;
 
 
-    border-radius: 40px;
+    border-radius: 2.5rem;
     position: fixed;
 
     width: 60vw;
@@ -412,7 +410,7 @@ h2 {
 }
 
 .project-modal .project-foto {
-    border-radius: 40px;
+    border-radius: 2.5rem;
 
     width: 100%;
     height: 65%;
@@ -423,7 +421,7 @@ h2 {
 
 .project-modal .project-info {
 
-    border-radius: 0 0 40px 40px;
+    border-radius: 0 0 2.5rem 2.5rem;
     flex-grow: 1;
 
     display: flex;
@@ -438,10 +436,10 @@ h2 {
 .project-modal .project-info-links {
 
 
-    border-radius: 0 0 0 40px;
+    border-radius: 0 0 0 2.5rem;
 
     width: 60%;
-    padding: 10px 15px;
+    padding: 0.625rem 1rem;
 
     display: flex;
     flex-direction: row;
@@ -449,7 +447,7 @@ h2 {
     justify-content: center;
     flex-wrap: nowrap;
 
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .project-modal .project-info-links .project-info-links-tweede-p {
@@ -469,39 +467,39 @@ h2 {
     cursor: zoom-in;
     display: block;
     width: 100%;
-    height: 140px;
+    height: 8.75rem;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 
 .project-modal .project-info-links img:hover {
     transform: scale(3.5);
     z-index: 1000;
     position: relative;
-    box-shadow: 0 0 50px #233D4D80;
+    box-shadow: 0 0 3.125rem #233D4D80;
 }
 
 .project-modal .project-info-links-eerste-foto {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .project-modal .project-info-links-tweede-foto {
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 
 
 .lijn {
 
     border-left: 2px solid #233D4D50;
-    margin: 25px 0;
+    margin: 1.5rem 0;
 }
 
 .project-modal .project-info-rechts {
     position: relative;
-    border-radius: 0 0 40px 0;
+    border-radius: 0 0 2.5rem 0;
 
     width: 40%;
-    padding: 10px 15px;
+    padding: 0.625rem 1rem;
 
 }
 
@@ -513,8 +511,8 @@ h2 {
 
 
     position: absolute;
-    right: 25px;
-    bottom: 22px;
+    right: 1.55rem;
+    bottom: 1.375rem;
 }
 
 .project-modal .project-info-rechts .project-keywords-container h4 {
@@ -527,27 +525,28 @@ h2 {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 0.5rem;
 }
 
 .project-modal .project-info-rechts .project-keywords p {
-    padding: 5px;
-    border-radius: 8px;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
     background-color: #215E61;
     color: #F5FBE6;
 }
 
 
 #recreatie h2 {
-    padding: 100px 0 80px 120px;
+    padding: clamp(2rem, 8vh, 6.25rem) 0 clamp(1.5rem, 6vh, 5rem) clamp(1rem, 8vw, 7.5rem);
 }
 
 #recreatie #recreatie-content-container {
-    margin: 0 80px 0 80px;
-
-    border-radius: 100px;
+    margin: 0 clamp(1rem, 5vw, 5rem);
+    border-radius: clamp(2rem, 10vw, 6.25rem) clamp(2rem, 10vw, 6.25rem) clamp(2rem, 10vw, 6.25rem) 0;
     overflow: hidden;
-    height: 700px;
+    height: clamp(25rem, 90vh, 43.75rem);
+
+
 
     display: flex;
     flex-direction: row;
@@ -576,13 +575,12 @@ h2 {
 
 #recreatie-content-links h3 {
 
-    font-size: 40px;
-    margin: 10px 15px;
+    font-size: 2.5rem;
+    margin: 0.625rem 1rem;
 }
 
 #recreatie-content-links p {
-    margin: 8px;
-    text-align: end;
+    margin: 0.5rem;
 }
 
 
@@ -604,11 +602,11 @@ h2 {
 
 #recreatie-content-rechts #recreatie-gitaar-scroller {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
     overflow-x: auto;
     overscroll-behavior-x: contain;
 
-    height: 280px;
+    height: 17.5rem;
 }
 
 #recreatie-gitaar-scroller video {
@@ -624,13 +622,13 @@ h2 {
 }
 
 #recreatie-content-rechts h3 {
-    font-size: 30px;
-    margin: 8px 12px;
+    font-size: 1.875rem;
+    margin: 0.5rem 0.75rem;
 
 }
 
 #recreatie-content-rechts p {
-    margin: 8px 8px 16px 8px;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
 }
 
 
@@ -639,7 +637,7 @@ footer {
 
     position: relative;
 
-    margin-top: 100px;
+    margin-top: 6.25rem;
 
     overflow: hidden;
 }
@@ -656,7 +654,7 @@ footer .terug-naar-boven {
     text-wrap: nowrap;
 
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 footer #footer-links {
@@ -667,12 +665,70 @@ footer #footer-links {
 
     width: 100%;
 
-    gap: 150px;
+    gap: 9.375rem;
 
     background-color: #215E61;
     color: #F5FBE6;
 
-    height: 300px;
+    height: 18.75rem;
 
 }
 
+@media screen and (max-width: 768px) {
+    :root {
+        font-size: 12px;
+    }
+
+    #projecten .eerste-project,
+    #projecten .laatste-project,
+    #recreatie #recreatie-content-container {
+        margin: 0;
+    }
+
+    div.navigatie-split-lijn {
+        display: none;
+    }
+
+    #projecten .project-modal {
+        width: 95vw;
+        height: 95vh;
+    }
+    .project-modal .project-info-links img {
+        transform-origin: bottom center;
+    }
+
+    .project-modal .project-info-links-eerste-foto {
+        transform-origin: bottom left !important;
+
+    }
+
+    #projecten .project .titel-div{
+        padding: 0;
+    }
+    #projecten .project .titel-div h3{
+        padding: 1rem 2rem;
+    }
+
+    #recreatie #recreatie-content-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 0;
+        margin: 0;
+
+        height: auto;
+        width: 100vw;
+    }
+
+
+    #recreatie #recreatie-content-container #recreatie-foto-links {
+        height: 25rem;
+    }
+    #recreatie-content-rechts,
+    #recreatie-content-links {
+        width: 100%;
+    }
+
+
+}
